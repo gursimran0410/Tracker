@@ -13,14 +13,14 @@ const pointSchema = new mongoose.Schema({
 })
 const trackSchema = new mongoose.Schema({
     userId:{
-        type: mongoose.Schema.Types.ObjectId,
+        type: mongoose.SchemaTypes.ObjectId,
         ref: 'User'
     },
     name:{
         type: String,
         default: ''
     },
-    location: [pointSchema]
+    locations: [pointSchema]
 })
 
 //Typing up some collection of MongoDB to Mongoose.
